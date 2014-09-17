@@ -32,11 +32,11 @@ angular.module('FishingHole', ['ionic', 'config', 'FishingHole.controllers'])
       controller: 'AppCtrl'
     })
 
-    .state('app.search', {
-      url: '/search',
+    .state('app.friends', {
+      url: '/friends',
       views: {
         'menuContent' :{
-          templateUrl: 'templates/search.html'
+          templateUrl: 'templates/friends.html'
         }
       }
     })
