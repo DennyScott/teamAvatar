@@ -6,7 +6,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('FishingHole', ['ionic','leaflet-directive', 'config', 'FishingHole.controllers', 'FishingHole.directives'])
+angular.module('FishingHole', ['ionic','leaflet-directive', 'config', 'FishingHole.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -52,6 +52,16 @@ angular.module('FishingHole', ['ionic','leaflet-directive', 'config', 'FishingHo
       }
     })
 
+		.state('app.map', {
+      url: '/map',
+      views: {
+        'menuContent' :{
+          templateUrl: 'templates/map.html',
+					controller: 'MapCtrl'
+        }
+      }
+    })
+
     .state('app.browse', {
       url: '/browse',
       views: {
@@ -80,6 +90,6 @@ angular.module('FishingHole', ['ionic','leaflet-directive', 'config', 'FishingHo
       }
     });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/home');
 });
 
