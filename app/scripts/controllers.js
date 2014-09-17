@@ -46,4 +46,19 @@ angular.module('FishingHole.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+})
+
+.controller('HomeCtrl', function($scope, $ionicLoading) {
+  angular.extend($scope, {
+        defaults: {
+            scrollWheelZoom: false
+        }
+    });
+
+  
+    //$ionicLoading.show({
+      //content: 'Getting current location...',
+      //showBackdrop: false
+    //});
+
 });

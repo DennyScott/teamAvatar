@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="bower_components/ionic/release/css/ionic.css" />
     <!-- endbower -->
     <!-- endbuild -->
-
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css">
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -19,6 +19,14 @@
 
   <body ng-app="FishingHole">
     <ion-nav-view></ion-nav-view>
+
+		<!-- build:js scripts/vendor.js -->
+    <!-- This Google Maps API file was downloaded from: -->
+    <!-- https://maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&sensor=true -->
+    <!-- Saving it in the vendor/ directory allows it to be bundled as part of the build system. -->
+    <!-- You should replace it with a version downloaded using your API key -->
+    <script src="vendor/google/maps.js"></script>
+
 
     <!-- build:js scripts/vendor.js -->
     <!-- <script src="vendor/someContribJs.js"></script> -->
@@ -40,6 +48,10 @@
         <script src="scripts/config.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers.js"></script>
+				 <script src="scripts/directives.js"></script>
         <!-- endbuild -->
+
+				<script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
+<script src="scripts/angular-leaflet-directive.min.js"></script>
 </body>
 </html>
