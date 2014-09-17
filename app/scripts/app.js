@@ -32,11 +32,12 @@ angular.module('FishingHole', ['ionic','leaflet-directive', 'config', 'FishingHo
       controller: 'AppCtrl'
     })
 
-    .state('app.search', {
-      url: '/search',
+    .state('app.friends', {
+      url: '/friends',
       views: {
         'menuContent' :{
-          templateUrl: 'templates/search.html'
+          templateUrl: 'templates/friends.html',
+          controller: 'FriendsCtrl'
         }
       }
     })

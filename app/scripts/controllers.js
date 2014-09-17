@@ -15,7 +15,7 @@ angular.module('FishingHole.controllers', [])
   // Triggered in the login modal to close it
   $scope.closeLogin = function() {
     $scope.modal.hide();
-  },
+  };
 
   // Open the login modal
   $scope.login = function() {
@@ -31,7 +31,7 @@ angular.module('FishingHole.controllers', [])
     $timeout(function() {
       $scope.closeLogin();
     }, 1000);
-  }
+  };
 })
 
 .controller('PlaylistsCtrl', function($scope) {
