@@ -9,21 +9,30 @@
 
   <ion-side-menu side="left">
     <header class="bar bar-header bar-stable">
-      <h1 class="title">Left</h1>
+      <h1 class="title">Navigation</h1>
     </header>
     <ion-content class="has-header">
       <ion-list>
-        <ion-item nav-clear menu-close ng-click="login()">
-          Login
-        </ion-item>
+			<ion-item nav-clear menu-close href="#/app/playlists">
+					Home          
+				</ion-item>
+        <!--<ion-item nav-clear menu-close ng-click="login()">-->
+          <!--Login-->
+        <!--</ion-item>-->
         <ion-item nav-clear menu-close href="#/app/search">
-          Search
+         My Journey 
         </ion-item>
         <ion-item nav-clear menu-close href="#/app/browse">
-          Browse
-        </ion-item>
+          Friends
+        </ion-item>			
         <ion-item nav-clear menu-close href="#/app/playlists">
-          Playlists
+          Getting Started
+        </ion-item>
+				<ion-item nav-clear menu-close href="#/app/playlists">
+          Fishlopedia
+        </ion-item>
+				<ion-item nav-clear menu-close href="#/app/playlists">
+          Tacklebox
         </ion-item>
       </ion-list>
     </ion-content>
