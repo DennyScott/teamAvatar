@@ -1,7 +1,36 @@
 'use strict';
 
-angular.module('FishingHole.controllers', [])
+angular.module('FishingHole')
 
 .controller('FriendsCtrl', function($scope) {
-  //controller here
-})
+  $scope.friends = [{
+    firstName: "Jon",
+    lastName: "Dart",
+    image: "images/jonDart.jpg"
+  },
+  {
+    firstName: "Jonathan",
+    lastName: "Dart",
+    image: "images/jonDart.jpg"
+  },
+  {
+    firstName: "John",
+    lastName: "Dart",
+    image: "images/jonDart.jpg"
+  },
+  {
+    firstName: "J",
+    lastName: "Dizzle",
+    image: "images/jonDart.jpg"
+  },
+  {
+    firstName: "Another Jon",
+    lastName: "Dart",
+    image: "images/jonDart.jpg"
+  },
+  {
+    firstName: "Jon",
+    lastName: "Dart Returns",
+    image: "images/jonDart.jpg"
+  }];
+});

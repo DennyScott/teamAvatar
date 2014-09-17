@@ -36,7 +36,8 @@ angular.module('FishingHole', ['ionic', 'config', 'FishingHole.controllers'])
       url: '/friends',
       views: {
         'menuContent' :{
-          templateUrl: 'templates/friends.html'
+          templateUrl: 'templates/friends.html',
+          controller: 'FriendsCtrl'
         }
       }
     })
