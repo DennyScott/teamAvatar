@@ -45,7 +45,8 @@
 	opacity: 1;
 	color:white;
 	font-family: "Helvetica";
-	font-size:10vmin;
+	font-size: 10vmin;
+	white-space: nowrap;
 }
 	
 .home-image:last-child {
