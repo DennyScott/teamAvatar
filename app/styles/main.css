@@ -15,8 +15,17 @@
 	margin-bottom: -5px;
 }
 
-.box
-{
 
 	
+.home-image:last-child {
+	margin-bottom:0px;
+}
+
+.home-scroll {
+	height:100%;
+}
+
+.scroll{
+	height:100%;
+	min-height:100%;
 }
