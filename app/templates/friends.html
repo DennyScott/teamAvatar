@@ -5,7 +5,7 @@
   </ion-nav-buttons>
 
   <ion-nav-buttons side="right">
-    <button class="button button-icon icon ion-ios7-plus-empty"></button>
+    <button class="button button-icon icon ion-ios7-plus-empty" ng-click="openChallengeFriends()"></button>
   </ion-nav-buttons>
 
   <ion-content class="has-header">
@@ -15,7 +15,7 @@
 				<a ng-repeat="item in friends" class="item item-avatar" href='#'>
 					<img src="images/jonDart.jpg"></img>
 					 <h2>{{item.firstName}} {{item.lastName}}</h2>
-     			 <p>Back off, man. I'm a scientist.</p>
+     			 <p>{{item.saying}}</p>
 				</a>
 			</div>
 		</div>

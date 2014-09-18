@@ -1,0 +1,38 @@
+<div class="modal">
+
+  <ion-header-bar class="bar bar-balanced">
+    <h1 class="title">Friends</h1>
+  </ion-header-bar>
+
+  <ion-content class="has-header">
+    	<div>
+  			<div class="list">
+  			<ion-item ng-repeat="item in friends" class="item item-avatar">
+          <!--
+  				<img src="images/jonDart.jpg"></img>
+          {{item.firstName}} {{item.lastName}}
+  				 
+          <label class="checkbox">
+            <input type="checkbox">
+          </label>-->
+            <img src="images/jonDart.jpg"></img>
+
+            <h2>{{item.firstName}} {{item.lastName}}</h2>
+
+            <!-- <i class="icon ion-ios7-checkmark-empty challenge-friends-icon"></i> -->
+            <label class="checkbox challenge-friends-checkmark">
+              <input type="checkbox">
+            </label>
+  			</ion-item>
+  		</div>
+  	</div>
+
+  
+
+  </ion-content>
+
+  <div id="challenge-friends-footer">
+    <div class="button button-full button-balanced" ng-Click="closeChallengeFriends()" id="challenge-friends-footer-button">Save</div>
+  </div>
+
+</div>

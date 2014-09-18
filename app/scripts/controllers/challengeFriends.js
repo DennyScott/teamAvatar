@@ -1,13 +1,8 @@
 'use strict';
 
 angular.module('FishingHole')
+  .controller('ChallengeFriendsCtrl', function($scope, $state, $ionicModal) {
 
-.controller('FriendsCtrl', function($scope, $state, $ionicModal) {
-  $ionicModal.fromTemplateUrl('templates/challengeFriends.html', {
-    scope: $scope
-  }).then(function(modal) {
-    $scope.modal = modal;
-  });
 
   $scope.friends = [{
     firstName: "Jon",
@@ -45,13 +40,4 @@ angular.module('FishingHole')
     saying: "I'll be back.",
     image: "images/jonDart.jpg"
   }];
-
-  $scope.openChallengeFriends = function(){
-    $scope.modal.show();
-  };
-
-  $scope.closeChallengeFriends = function(){
-    $scope.modal.hide();
-  }
-
 });
