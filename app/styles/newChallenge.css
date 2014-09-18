@@ -1,0 +1,37 @@
+.newChallenge-center {
+  -webkit-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 10px; 
+}
+
+.newChallenge-container {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.newChallenge-container.column {
+  -webkit-flex-direction: column;
+  flex-direction: column; }
+
+.newChallenge-img{
+  width: 40%;
+}
+
+.newChallenge-padding{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#challenge-friends-footer{
+  position: absolute;
+    bottom: -10px;
+    width: 100%;
+    padding-left:0px;
+    padding-right:0px;
+    z-index: 999;
+}

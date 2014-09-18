@@ -1,10 +1,32 @@
 <ion-view title="Journey">
 
-<ion-content class='has-header has-subheader'>
+<ion-content class='has-header has-subheader' ng-controller="NewChallengeCtrl">
+	<div class="newChallenge-container column align-center">
+		<div class="newChallenge-center">
+			<img src="images/jonDart.jpg" class="newChallenge-img"></img>
+		</div>
+	</div>
+
+	<button class="button button-block button-positive newChallenge-padding">
+	  Challenge Type
+	</button>
+
+	<button class="button button-block button-positive newChallenge-padding">
+	  Location
+	</button>
+
+	<button class="button button-block button-positive newChallenge-padding">
+	  Time and Date
+	</button>
+
+	<button class="button button-block button-positive newChallenge-padding" ng-click="openChallengeFriends()">
+	  Add Friends
+	</button>
+
+	<!--text box here! -->
 
 
 
-This is a new challenge.
 </ion-content>
 
 </ion-view>
