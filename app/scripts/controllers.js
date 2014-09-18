@@ -56,17 +56,37 @@ angular.module('FishingHole.controllers', [])
 })
 
 .controller('MapCtrl', function($scope, $ionicLoading, $ionicActionSheet, $ionicModal) {
-  angular.extend($scope, {
-        defaults: {
-            tileLayer: "http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png",
-        maxZoom: 14,
-        path: {
-            weight: 10,
-            color: '#800000',
-            opacity: 1
-        }
-				}
+  // angular.extend($scope, {
+  //       defaults: {
+  //           tileLayer: "http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png",
+  //       maxZoom: 14,
+  //       path: {
+  //           weight: 10,
+  //           color: '#800000',
+  //           opacity: 1
+  //       }
+		// 		}
+
+    angular.extend($scope, {
+    center: {
+      lat: 49.5358,
+      lng: 97.0821,
+      zoom: 1
+    },
+    maxbounds: {},
+    defaults: {
+      maxZoom: 16,
+      minZoom: 12,
+      tileLayer: "http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png",
+      tileLayerOptions: {
+          opacity: 0.9,
+          detectRetina: true,
+          reuseTiles: true,
+      },
+      scrollWheelZoom: true
+    }
     });
+
 
 		 // Triggered on a button click, or some other target
  $scope.showActions = function() {
@@ -90,7 +110,7 @@ angular.module('FishingHole.controllers', [])
      }
    });
 
- };
+ }
 
  $scope.startedJourney = false;
 
