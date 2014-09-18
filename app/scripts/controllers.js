@@ -48,7 +48,7 @@ angular.module('FishingHole.controllers', [])
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
 
-.controller('MapCtrl', function($scope, $ionicLoading) {
+.controller('MapCtrl', function($scope, $ionicLoading, $ionicModal) {
   angular.extend($scope, {
         defaults: {
             tileLayer: "http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png",
@@ -60,6 +60,23 @@ angular.module('FishingHole.controllers', [])
         }
 				}
     });
+
+		$ionicModal.fromTemplateUrl('templates/addEvent.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+
+  // Triggered in the login modal to close it
+  $scope.closeAddEvent = function() {
+    $scope.modal.hide();
+  };
+
+  // Open the login modal
+  $scope.addEvent = function() {
+    $scope.modal.show();
+  };
+
 
   
     //$ionicLoading.show({

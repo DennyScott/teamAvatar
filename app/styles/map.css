@@ -1,0 +1,11 @@
+.journeyToggle {
+	width: 100%;
+	position: absolute;
+	left: 42%;
+	min-width: 30px;
+	height: 43px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 17px;
+	line-height: 36px;
+}
