@@ -9,18 +9,16 @@
   </ion-nav-buttons>
 
   <ion-content class="has-header">
-    <ion-scroll>
     	<div>
 				<div class="list">
-				<a ng-repeat="item in friends" class="item item-avatar" href='#'>
-					<img src="images/jonDart.jpg"></img>
+				<a ng-repeat="item in friends" class="item item-avatar" href='' ng-Click="">
+					<img ng-src="{{item.image}}"></img>
 					 <h2>{{item.firstName}} {{item.lastName}}</h2>
      			 <p>{{item.saying}}</p>
 				</a>
 			</div>
 		</div>
     
-	</ion-scroll>
 
   </ion-content>
 </ion-view>
