@@ -1,0 +1,17 @@
+.challenge-center {
+  -webkit-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding-top: 10px; 
+}
+
+.challenge-container {
+  display: -webkit-flex;
+  display: flex; }
+
+.challenge-container.column {
+  -webkit-flex-direction: column;
+  flex-direction: column; }
