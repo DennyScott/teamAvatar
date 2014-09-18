@@ -1,12 +1,11 @@
 
 .friends-img{
 	border-radius: 50%;
-	width: 20%;
 }
 
 .friends-name{
 	display: inline;
-	vertical-align: middle;;
+	vertical-align: middle;
 }
 
 .friends-list-item{

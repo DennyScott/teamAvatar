@@ -1,0 +1,32 @@
+<ion-view hide-back-button='true' title="Challenges">
+<ion-nav-buttons side="left">
+<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+</ion-nav-buttons>
+<div class="bar bar-subheader row challenge-navigation">
+  <div class="card navigation-card col" ui-sref="app.challenges.new">
+  <div class="item item-text-wrap">
+		<i class='icon ion-compose'></i>
+    New
+	</div>
+</div>
+
+<div class="card navigation-card col" ui-sref="app.challenges.active">
+  <div class="item item-text-wrap">
+		<i class='icon ion-loop'></i>
+    Active
+	</div>
+</div>
+
+
+<div class="card navigation-card col" ui-sref="app.challenges.completed">
+  <div class="item item-text-wrap">
+		<i class='icon ion-checkmark-round'></i>
+    Complete
+	</div>
+</div>
+
+</div>
+
+<ion-nav-view name='challengeContent'></ion-nav-view>
+
+</ion-view>

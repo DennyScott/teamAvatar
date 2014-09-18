@@ -55,7 +55,7 @@ angular.module('FishingHole.controllers', [])
   };
 })
 
-.controller('MapCtrl', function($scope, $ionicLoading) {
+.controller('MapCtrl', function($scope, $ionicLoading, $ionicActionSheet, $ionicModal) {
   angular.extend($scope, {
         defaults: {
             tileLayer: "http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png",
@@ -67,6 +67,49 @@ angular.module('FishingHole.controllers', [])
         }
 				}
     });
+
+		 // Triggered on a button click, or some other target
+ $scope.showActions = function() {
+
+   // Show the action sheet
+   var hideSheet = $ionicActionSheet.show({
+     buttons: [
+       { text: 'Caught Fish' },
+			 {text: 'Take Photo'},
+			 {text: 'Tell a Story'},
+			  { text: '<b>Share</b> This' }
+     ],
+     destructiveText: 'Delete',
+     titleText: 'Add an Event',
+     cancelText: 'Cancel',
+     cancel: function() {
+          // add cancel code..
+        },
+     buttonClicked: function(index) {
+       return true;
+     }
+   });
+
+ };
+
+ $scope.startedJourney = false;
+
+		$ionicModal.fromTemplateUrl('templates/journeyInfo.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+
+  // Triggered in the login modal to close it
+  $scope.closeAddEvent = function() {
+    $scope.modal.hide();
+  };
+
+  // Open the login modal
+  $scope.addEvent = function() {
+    $scope.modal.show();
+  };
+
 
   
     //$ionicLoading.show({
