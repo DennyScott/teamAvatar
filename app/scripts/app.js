@@ -62,6 +62,15 @@ angular.module('FishingHole', ['ionic','leaflet-directive', 'config', 'FishingHo
       }
     })
 
+		.state('app.challenges', {
+      url: '/challenges',
+      views: {
+        'menuContent' :{
+          templateUrl: 'templates/challenge.html',
+        }
+      }
+    })
+
     .state('app.browse', {
       url: '/browse',
       views: {

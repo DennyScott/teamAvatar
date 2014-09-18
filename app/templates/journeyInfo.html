@@ -1,6 +1,6 @@
 <div class="modal">
 	<ion-header-bar>
-	<h1 class="title">Add Event</h1>
+	<h1 class="title">My Journey Log</h1>
 	<div class="buttons">
 		<button class="button button-clear" ng-click="closeAddEvent()">Close</button>
 	</div>
@@ -9,18 +9,29 @@
 	<ion-content>
 		<ion-list>
 		<ion-item class="item-icon-right"  href="#/app/playlists/{{playlist.id}}">
-		Fish
+		My Fish
 		<i class="icon ion-chevron-right icon-accessory"></i>
 		</ion-item>
 		<ion-item class="item-icon-right"  href="#/app/playlists/{{playlist.id}}">
-		Image
+		My Pictures
 		<i class="icon ion-chevron-right icon-accessory"></i>
 		</ion-item>
 		<ion-item class="item-icon-right"  href="#/app/playlists/{{playlist.id}}">
-		Event
+		My Stories
 		<i class="icon ion-chevron-right icon-accessory"></i>
 		</ion-item>
 		</ion-list>
+		
+		<div class="journey-wrapper">
+		<button ng-show="startedJourney==false" ng-click="startedJourney = true" class="button button-block button-positive">
+			Start My Journey
+		</button>
+
+			<button ng-show="startedJourney==true" ng-click="startedJourney = false" class="button button-block button-assertive">
+			Complete My Journey
+		</button>
+
+	</div>
 	</ion-content>
 
 </div>
