@@ -1,0 +1,13 @@
+<ion-view title="My Fish">
+	<ion-content>
+			<div class="list">
+				<a ng-repeat="item in fish" class="item item-avatar" href='#'>
+					<img ng-src="{{item.image}}"></img>
+					 <h2>{{item.name}}</h2>
+					 <p>{{item.location}} - {{item.size}}</p>
+				</a>
+			</div>
+	</ion-content>
+
+	</ion-view>
+

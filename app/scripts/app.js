@@ -6,7 +6,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('FishingHole', ['ionic','leaflet-directive', 'config', 'FishingHole.controllers', 'angular-parallax'])
+angular.module('FishingHole', ['ionic', 'leaflet-directive', 'config', 'FishingHole.controllers'])
 
 .run(function($ionicPlatform) {
 	$ionicPlatform.ready(function() {
@@ -58,6 +58,27 @@ angular.module('FishingHole', ['ionic','leaflet-directive', 'config', 'FishingHo
 			'menuContent' :{
 				templateUrl: 'templates/map.html',
 				controller: 'MapCtrl'
+			}
+		}
+	})
+
+	.state('app.myFish', {
+		url: '/myFish',
+		views: {
+			'menuContent' :{
+				templateUrl: 'templates/myFish.html',
+				controller: 'MyFishCtrl'
+			}
+		}
+	})
+
+
+	.state('app.info', {
+		url: '/journeylog',
+		views: {
+			'menuContent' :{
+				templateUrl: 'templates/journeyInfo.html',
+				controller: 'JourneyInfoCtrl'
 			}
 		}
 	})
