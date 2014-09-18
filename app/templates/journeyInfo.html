@@ -1,14 +1,8 @@
-<div class="modal">
-	<ion-header-bar>
-	<h1 class="title">My Journey Log</h1>
-	<div class="buttons">
-		<button class="button button-clear" ng-click="closeAddEvent()">Close</button>
-	</div>
-	</ion-header-bar>
+<ion-view title="My Journey Log">
 
 	<ion-content>
 		<ion-list>
-		<ion-item class="item-icon-left item-icon-right"  href="#/app/playlists/{{playlist.id}}">		
+		<ion-item class="item-icon-left item-icon-right" ui-sref="app.myFish">		
 	 	<i class="icon ion-ios7-briefcase"></i>
 		My Fish
 		<i class="icon ion-chevron-right icon-accessory"></i>
@@ -38,5 +32,4 @@
 	</div>
 	</ion-content>
 
-</div>
-
+	</ion-view>

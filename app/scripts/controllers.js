@@ -48,6 +48,51 @@ angular.module('FishingHole.controllers', [])
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
 
+.controller('JourneyInfoCtrl', function($scope, $stateParams) {
+	 $scope.startedJourney = false;
+})
+
+.controller('MyFishCtrl', function($scope, $stateParams) {
+	  $scope.fish = [{
+    name: "Pickerel",
+    size: "3 lb",
+    location: "Lake Winnipeg",
+    image: "images/fishy.png"
+  },
+  {
+    name: "Walleye",
+    size: "3 lb",
+    location: "Lake Winnipeg",
+    image: "images/fishy.png"
+  },
+  {
+    name: "Bass",
+    size: "7 lb",
+    location: "Lake Winnipeg",
+    image: "images/fishy.png"
+  },
+  {
+    name: "Narwhal",
+    size: "10 lb",
+    location: "Lake Winnipeg",
+    image: "images/fishy.png"
+  },
+  {
+    name: "Sword Fish",
+    size: "3 lb",
+    location: "Lake Winnipeg",
+    image: "images/fishy.png"
+  },
+  {
+    name: "Moby Dick",
+    size: "1000 lb",
+    location: "Lake Winnipeg",
+    image: "images/fishy.png"
+  }];
+
+})
+
+
 .controller('HomeCtrl', function($scope, $state ,$stateParams) {
   $scope.goToMap = function()
   {
@@ -55,7 +100,7 @@ angular.module('FishingHole.controllers', [])
   };
 })
 
-.controller('MapCtrl', function($scope, $ionicLoading, $ionicActionSheet, $ionicModal) {
+.controller('MapCtrl', function($scope, $ionicLoading, $rootScope, $ionicActionSheet, $ionicModal) {
   // angular.extend($scope, {
   //       defaults: {
   //           tileLayer: "http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png",
@@ -112,7 +157,6 @@ angular.module('FishingHole.controllers', [])
 
  }
 
- $scope.startedJourney = false;
 
 		$ionicModal.fromTemplateUrl('templates/journeyInfo.html', {
     scope: $scope
@@ -121,9 +165,9 @@ angular.module('FishingHole.controllers', [])
   });
 
   // Triggered in the login modal to close it
-  $scope.closeAddEvent = function() {
-    $scope.modal.hide();
-  };
+  $rootScope.closeAddEvent = function() {
+		$state.go('app.map')    
+	};
 
   // Open the login modal
   $scope.addEvent = function() {
