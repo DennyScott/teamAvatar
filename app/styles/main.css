@@ -15,7 +15,18 @@
 	margin-bottom: -5px;
 }
 
+.home-image .hover{
+	opacity:0.7;
 
+}
+
+.home-image .text-content
+{
+   position: relative; 
+   top: 25%;
+   left: 35%;
+   width: 100%; 
+}
 	
 .home-image:last-child {
 	margin-bottom:0px;
