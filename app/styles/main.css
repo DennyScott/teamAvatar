@@ -14,12 +14,14 @@
 .home-image-right {
 	margin-bottom: -5px;
 	position: relative;
+	-webkit-animation: DriftRight 165s linear infinite;
 	animation: DriftRight 165s linear infinite;
 }
 
 .home-image-left {
 	margin-bottom: -5px;
 	position: relative;
+	-webkit-animation: DriftLeft 165s linear infinite;
 	animation: DriftLeft 165s linear infinite;
 }
 
