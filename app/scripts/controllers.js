@@ -48,7 +48,7 @@ angular.module('FishingHole.controllers', [])
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
 
-.controller('MapCtrl', function($scope, $ionicLoading, $ionicModal) {
+.controller('MapCtrl', function($scope, $ionicLoading, $ionicActionSheet, $ionicModal) {
   angular.extend($scope, {
         defaults: {
             tileLayer: "http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png",
@@ -61,7 +61,33 @@ angular.module('FishingHole.controllers', [])
 				}
     });
 
-		$ionicModal.fromTemplateUrl('templates/addEvent.html', {
+		 // Triggered on a button click, or some other target
+ $scope.showActions = function() {
+
+   // Show the action sheet
+   var hideSheet = $ionicActionSheet.show({
+     buttons: [
+       { text: 'Caught Fish' },
+			 {text: 'Take Photo'},
+			 {text: 'Tell a Story'},
+			  { text: '<b>Share</b> This' }
+     ],
+     destructiveText: 'Delete',
+     titleText: 'Add an Event',
+     cancelText: 'Cancel',
+     cancel: function() {
+          // add cancel code..
+        },
+     buttonClicked: function(index) {
+       return true;
+     }
+   });
+
+ };
+
+ $scope.startedJourney = false;
+
+		$ionicModal.fromTemplateUrl('templates/journeyInfo.html', {
     scope: $scope
   }).then(function(modal) {
     $scope.modal = modal;
