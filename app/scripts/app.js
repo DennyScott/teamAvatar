@@ -71,6 +71,42 @@ angular.module('FishingHole', ['ionic','leaflet-directive', 'config', 'FishingHo
       }
     })
 
+		.state('app.challenges.new', {
+      url: '/new',
+      views: {
+        'menuContent' :{
+          templateUrl: 'templates/challenge.html',
+        },
+				'challengeContent' : {
+					templateUrl: 'templates/newChallenge.html'
+				}
+      }
+    })
+
+		.state('app.challenges.completed', {
+      url: '/completed',
+      views: {
+        'menuContent' :{
+          templateUrl: 'templates/challenge.html',
+        },
+				'challengeContent' : {
+					templateUrl: 'templates/completedChallenge.html'
+				}
+      }
+    })
+
+		.state('app.challenges.active', {
+      url: '/active',
+      views: {
+        'menuContent' :{
+          templateUrl: 'templates/challenge.html',
+        },
+				'challengeContent' : {
+					templateUrl: 'templates/activeChallenge.html'
+				}
+      }
+    })
+
     .state('app.browse', {
       url: '/browse',
       views: {
