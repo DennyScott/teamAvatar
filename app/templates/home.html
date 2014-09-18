@@ -1,33 +1,29 @@
 
-<ion-view title="Home">
+<ion-view title="Home" controller="HomeCtrl as home">
  <ion-nav-buttons side="left">
    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
 
 
   <ion-content class="has-header">
-    	<div class="home-image box">
-    			<img src="images/Angler1.jpg"></img>
+    	<div parallax-background parallax-ratio="0.4" class="home-image photo angler1" ng-click = "goToMap()">
     			<div class="text-content">
-    				<h2>Trip 1</h2>
+    				<h2>Black Lake</h2>
     			</div>
         </div>
-    	<div class="home-image box">
-    			<img src="images/Angler2.jpg"></img>
+    	<div parallax-background parallax-ratio="0.8" class="home-image photo angler2" ng-click = "goToMap()">
     			<div class="text-content">
-    				<h2>Trip 2</h2> 
+    				<h2>Sturgeon Creek</h2> 
     			</div>
 	    </div>
-	    <div class="home-image box">
-	    		<img src="images/Angler3.jpg"></img>
+	    <div parallax-background parallax-ratio="0.8" class="home-image photo angler3" ng-click = "goToMap()">
 	    		<div class="text-content">
-    				<h2>Trip 3</h2> 
+    				<h2>Lake Winnipegosis</h2> 
     			</div>
 	    </div>
-	    <div class="home-image box">
-	    		<img src="images/Angler4.jpg"></img>
+	    <div parallax-background parallax-ratio="0.8" class="home-image photo angler4" ng-click = "goToMap()">
 	    		<div class="text-content">
-    				<h2>Trip 4</h2>
+    				<h2>Lake Winnipeg</h2>
     			</div>
 	    </div>
   </ion-content>

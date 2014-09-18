@@ -48,7 +48,11 @@ angular.module('FishingHole.controllers', [])
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
 
-.controller('HomeCtrl', function($scope, $stateParams) {
+.controller('HomeCtrl', function($scope, $state ,$stateParams) {
+  $scope.goToMap = function()
+  {
+    $state.go('app.map');
+  };
 })
 
 .controller('MapCtrl', function($scope, $ionicLoading) {
