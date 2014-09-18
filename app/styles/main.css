@@ -99,6 +99,17 @@
     0%      { background-position: -660px 0; }
     100%    { background-position: 0 0; }
 }
+
+@-webkit-keyframes DriftRight {
+    0%      { background-position: 0 0; }
+    100%    { background-position: -660px 0; }
+}
+
+@-webkit-keyframes DriftLeft {
+    0%      { background-position: -660px 0; }
+    100%    { background-position: 0 0; }
+}
+
 .journey-wrapper {
 	margin-left: 5px;
 	margin-right: 5px;
