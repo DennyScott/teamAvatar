@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('FishingHole')
-  .controller('ChallengeFriendsCtrl', function($scope, $state) {
+  .controller('ChallengeFriendsCtrl', function($scope, $state, $ionicModal) {
 
 
   $scope.friends = [{

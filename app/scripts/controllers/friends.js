@@ -2,7 +2,13 @@
 
 angular.module('FishingHole')
 
-.controller('FriendsCtrl', function($scope, $state) {
+.controller('FriendsCtrl', function($scope, $state, $ionicModal) {
+  $ionicModal.fromTemplateUrl('templates/challengeFriends.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+
   $scope.friends = [{
     firstName: "Jon",
     lastName: "Dart",
@@ -40,7 +46,12 @@ angular.module('FishingHole')
     image: "images/jonDart.jpg"
   }];
 
-  $scope.goToChallengeFriends = function(){
-    $state.go('app.challengeFriends');
+  $scope.openChallengeFriends = function(){
+    $scope.modal.show();
   };
+
+  $scope.closeChallengeFriends = function(){
+    $scope.modal.hide();
+  }
+
 });

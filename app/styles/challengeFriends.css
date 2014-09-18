@@ -14,10 +14,27 @@
 }
 
 #challenge-friends-footer{
-	position: fixed;
+	position: absolute;
   	bottom: -10px;
   	width: 100%;
   	padding-left:0px;
   	padding-right:0px;
   	z-index: 999;
+}
+
+.challenge-friends-icon{
+	width: 34px !important;
+	font-size: 50px !important;
+}
+
+.challenge-friends-button{
+	max-width: 34px;
+	max-height: 34px;
+}
+
+.challenge-friends-checkmark{
+	margin-left: 85%;
+	bottom: 25px;
+	display: block;
+	height: 0px;
 }
