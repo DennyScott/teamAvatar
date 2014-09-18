@@ -1,0 +1,23 @@
+
+.challenge-friends-img{
+	border-radius: 50%;
+	width: 20%;
+}
+
+.challenge-friends-name{
+	display: inline;
+	vertical-align: middle;
+}
+
+.challenge-friends-list-item{
+	padding: 5px;
+}
+
+#challenge-friends-footer{
+	position: fixed;
+  	bottom: -10px;
+  	width: 100%;
+  	padding-left:0px;
+  	padding-right:0px;
+  	z-index: 999;
+}

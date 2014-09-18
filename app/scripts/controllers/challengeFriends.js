@@ -1,8 +1,9 @@
 'use strict';
 
 angular.module('FishingHole')
+  .controller('ChallengeFriendsCtrl', function($scope, $state) {
 
-.controller('FriendsCtrl', function($scope, $state) {
+
   $scope.friends = [{
     firstName: "Jon",
     lastName: "Dart",
@@ -39,8 +40,4 @@ angular.module('FishingHole')
     saying: "I'll be back.",
     image: "images/jonDart.jpg"
   }];
-
-  $scope.goToChallengeFriends = function(){
-    $state.go('app.challengeFriends');
-  };
 });
