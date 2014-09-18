@@ -48,7 +48,7 @@ angular.module('FishingHole.controllers', [])
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
 
-.controller('MapCtrl', function($scope, $ionicLoading, $ionicModal) {
+.controller('MapCtrl', function($scope, $ionicLoading, $ionicActionSheet, $ionicModal) {
   angular.extend($scope, {
         defaults: {
             tileLayer: "http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png",
@@ -67,11 +67,13 @@ angular.module('FishingHole.controllers', [])
    // Show the action sheet
    var hideSheet = $ionicActionSheet.show({
      buttons: [
-       { text: '<b>Share</b> This' },
-       { text: 'Move' }
+       { text: 'Caught Fish' },
+			 {text: 'Take Photo'},
+			 {text: 'Tell a Story'},
+			  { text: '<b>Share</b> This' }
      ],
      destructiveText: 'Delete',
-     titleText: 'Modify your album',
+     titleText: 'Add an Event',
      cancelText: 'Cancel',
      cancel: function() {
           // add cancel code..
@@ -81,14 +83,11 @@ angular.module('FishingHole.controllers', [])
      }
    });
 
-   // For example's sake, hide the sheet after two seconds
-   $timeout(function() {
-     hideSheet();
-   }, 2000);
-
  };
 
-		$ionicModal.fromTemplateUrl('templates/addEvent.html', {
+ $scope.startedJourney = false;
+
+		$ionicModal.fromTemplateUrl('templates/journeyInfo.html', {
     scope: $scope
   }).then(function(modal) {
     $scope.modal = modal;
