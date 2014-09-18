@@ -22,6 +22,12 @@ angular.module('FishingHole')
     image: "images/jonDart.jpg"
   },
   {
+    firstName: "Avatar",
+    lastName: "Jon",
+    saying: "The Last Airbender",
+    image: "images/jDizzly.jpg"
+  },
+  {
     firstName: "John",
     lastName: "Dart",
     saying: "I like face hair too.",
